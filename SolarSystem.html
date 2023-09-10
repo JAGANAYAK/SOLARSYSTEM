@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <link rel="website icon" href="images/SolarSystem1.png" />
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+    
+    #navbar {
+        height: 50px;
+        background: #000;
+        position: sticky;
+        top: 0;
+    }
+    
+    #navbar ul {
+        display: flex;
+    }
+    
+    #navbar ul li {
+        list-style: none;
+        margin-top: 10px;
+    }
+    
+    #navbar ul li a {
+        padding: 0px 10px;
+        /* background: red; */
+        color: aqua;
+        margin: 0px 10px;
+        text-decoration: none;
+    }
+    
+    #navbar ul li a:hover {
+        color: red;
+        text-decoration: underline;
+        transition-duration: 0.3s;
+        /* transform: scalex(30px); */
+        font-size: 1.3rem;
+        /* color: rgb(10, 206, 206); */
+    }
+    
+    .container1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        height: 655px;
+        border: 2px solid blue;
+        color: white;
+    }
+    
+    .container1 h1 {
+        margin-top: 10px;
+    }
+    
+    .container1::before {
+        content: "";
+        background: url("images/MilkWay.jpg") no-repeat center center/cover;
+        position: absolute;
+        top: 0px;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.89;
+    }
+    
+    .container2 {
+        padding: 5px 5px;
+        display: grid;
+        grid-row-gap: 5px;
+        width: 100;
+    }
+    
+    .items {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        /* grid-column-gap: 10px; */
+        width: 700px;
+        height: 200px;
+        margin: 5px;
+        background: khaki;
+        border: 2px solid black;
+        padding: 5px;
+    }
+    
+    .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        background: #000;
+    }
+    /* #sun::before{
+      content: "";
+      background: url('images/sun.png') no-repeat center center/cover;
+    } */
+    
+    .items img {
+        top: 50%;
+        left: 50%;
+        height: 150px;
+        width: 150px;
+    }
+    
+    #saturn img {
+        height: 150px;
+        width: 150px;
+        rotate: -6deg;
+    }
+    
+    .content {
+        background: silver;
+        border: 2px solid black;
+    }
+    
+    .items .content p {
+        text-align: justify;
+        margin-top: 10px;
+    }
+    
+    .items .content h2 {
+        text-align: center;
+    }
+    
+    .items:hover {
+        cursor: pointer;
+        .innerimg {
+            transition-duration: 1s;
+            transform: scale(1.2);
+        }
+        .heading {
+            transition-duration: 0.5s;
+            transform: scale(1.2);
+        }
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#sun">Sun</a></li>
+            <li><a href="#mercury">Mercury</a></li>
+            <li><a href="#venus">Venus</a></li>
+            <li><a href="#earth">Earth</a></li>
+            <li><a href="#mars">Mars</a></li>
+            <li><a href="#jupiter">Jupiter</a></li>
+            <li><a href="#saturn">Saturn</a></li>
+            <li><a href="#uranus">Uranus</a></li>
+            <li><a href="#neptune">Neptune</a></li>
+        </ul>
+    </nav>
+    <div class="container1">
+
+        <h1>Solar System</h1>
+    </div>
+    <div class="container2">
+        <div class="items" id="sun">
+            <div class="img">
+                <img class="innerimg" src="./images/sun.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">SUN</h2>
+                <p>
+                    The Sun is the star at the center of the Solar System. It is a massive, hot ball of plasma, inflated and heated by nuclear fusion reactions at its core. Part of this internal energy is emitted from the Sun's surface as light, ultraviolet, and infrared
+                    radiation, providing most of the energy for life on Earth.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="mercury">
+            <div class="img">
+                <img class="innerimg" src="./images/mercury.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">MERCURY</h2>
+                <p>
+                    Mercury is a planet in our solar system. It is the smallest of the eight planets. It is also the closest to the sun. Mercury goes around the sun the fastest of all the planets. Mercury has no moons.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="venus">
+            <div class="img">
+                <img class="innerimg" src="./images/venus.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">VENUS</h2>
+                <p>
+                    Venus is the second planet from the Sun. It is a rocky planet with the densest atmosphere of all the rocky bodies in the Solar System, and the only one with a mass and size that is close to that of its orbital neighbour Earth.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="earth">
+            <div class="img">
+                <img class="innerimg" src="./images/earth.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">EARTH</h2>
+                <p>
+                    Earth is the third planet from the Sun and the only astronomical object known to harbor life. This is enabled by Earth being a water world, the only one in the Solar System sustaining liquid surface water. Almost all of Earth's water is contained in its
+                    global ocean, covering 70.8% of Earth's surface.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="mars">
+            <div class="img">
+                <img class="innerimg" src="./images/mars.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">MARS</h2>
+                <p>
+                    Mars is the fourth planet and the furthest terrestrial planet from the Sun. The reddish color of its surface is due to finely grained iron(III) oxide dust in the soil, giving it the nickname "the Red Planet". Mars's radius is second smallest among the
+                    planets in the Solar System at 3,389.5 km (2,106 mi). The Martian dichotomy is visible on the surface: on average, the terrain on Mars's northern hemisphere is flatter and lower than its southern hemisphere.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="jupiter">
+            <div class="img">
+                <img class="innerimg" src="./images/jupiter.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">JUPITER</h2>
+                <p>
+                    Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of
+                    the Sun. It is orbiting the Sun at a distance of 5.20 AU (778.5 Gm) with an orbital period of 11.86 years.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="saturn">
+            <div class="img">
+                <img class="innerimg" src="./images/saturn2.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">SATURN</h2>
+                <p>
+                    Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine-and-a-half times that of Earth. It has only one-eighth the average density of Earth, but is over
+                    95 times more massive.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="uranus">
+            <div class="img">
+                <img class="innerimg" src="./images/uranus.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">URANUS</h2>
+                <p>
+                    Uranus is an ice giant (instead of a gas giant). It is mostly made of flowing icy materials above a solid core. Uranus has a thick atmosphere made of methane, hydrogen, and helium. Uranus is the only planet that spins on its side. Uranus spins the opposite
+                    direction as Earth and most other planets.
+                </p>
+            </div>
+        </div>
+        <div class="items" id="neptune">
+            <div class="img">
+                <img class="innerimg" src="./images/neptune.png" alt="" />
+            </div>
+            <div class="content">
+                <h2 class="heading">NEPTUNE</h2>
+                <p>
+                    Neptune is the eighth planet from the Sun and the farthest IAU-recognized planet in the Solar System. It is the fourth-largest planet in the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass
+                    of Earth, and slightly more massive than its near-twin Uranus.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
